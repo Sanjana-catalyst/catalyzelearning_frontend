@@ -5,10 +5,13 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <div >
+      <Navbar/>
       <Routes>
         <Route element={<Home/>}path="/Home"></Route>
         <Route element={<Login/>}path="/Login"></Route>
@@ -16,7 +19,7 @@ function App() {
         <Route element={<Dashboard/>}path="/Dashboard"></Route>
         <Route element={<Settings/>}path="/Settings"></Route>
       </Routes>
-      
+      <Footer/>
     </div>
   )
 }

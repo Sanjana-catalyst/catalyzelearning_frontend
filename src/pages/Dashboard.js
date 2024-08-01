@@ -1,7 +1,8 @@
-import React from 'react';
-import axios from axios;
+import React,{useEffect} from 'react';
+import axios from 'axios';
 
 function Dashboard() {
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -14,9 +15,12 @@ function Dashboard() {
 
     fetchData();
   }, []);
+
   return (
     <div>
-      
+      <div className='text-3xl font-semibold px-4'>
+        Hai K.V.Komal Akhil
+      </div>
     </div>
   )
 }
