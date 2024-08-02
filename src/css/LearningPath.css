@@ -1,0 +1,39 @@
+/* src/components/Roadmap.css */
+
+.current-milestone {
+    position: relative;
+  }
+  
+  .beep-effect {
+    animation: beep 1s infinite;
+  }
+  
+  @keyframes beep {
+    0% {
+      transform: scale(1);
+      background-color: #4f46e5; /* Blue color for the "beep" effect */
+    }
+    50% {
+      transform: scale(1.2);
+      background-color: #3b82f6; /* Slightly lighter blue */
+    }
+    100% {
+      transform: scale(1);
+      background-color: #4f46e5; /* Blue color for the "beep" effect */
+    }
+  }
+  
+  /* Style for finished milestones */
+  .bg-green-500 {
+    background-color: #10b981;
+  }
+  
+  /* Style for text color when a milestone is finished */
+  .text-gray-500 {
+    color: #6b7280;
+  }
+  
+  .text-gray-400 {
+    color: #9ca3af;
+  }
+  
