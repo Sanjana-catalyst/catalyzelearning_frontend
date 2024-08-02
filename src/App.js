@@ -7,7 +7,8 @@ import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import Coins from './pages/Coins';
+import LearningPath from './pages/LearningPath';
 function App() {
   return (
    
@@ -20,6 +21,8 @@ function App() {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Settings" element={<Settings />} />
+        <Route element={<Coins/>}path="/Coins"></Route>
+        <Route element={<LearningPath/>}path="/LearningPath"></Route>
           </Routes>
         </main>
         <Footer />
