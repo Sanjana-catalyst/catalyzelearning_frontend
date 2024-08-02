@@ -4,6 +4,8 @@ import FilledButton from "./FilledButton";
 import Login from "../pages/Login";
 import { useNavigate } from "react-router-dom";
 import OutlineButton from "./OutlineButton";
+import { TfiMenu } from 'react-icons/tfi';
+
 const Navbar = () => {
   const navigate = useNavigate();
   return (
