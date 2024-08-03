@@ -9,6 +9,7 @@ import { TfiMenu } from 'react-icons/tfi';
 const Navbar = () => {
   const navigate = useNavigate();
   return (
+    <div className="flex justify-center" >
     <div className="flex w-full justify-between items-center py-2 px-4 border-b">
       <div className="flex w-[50%] items-center ">
         <div className="flex items-center gap-2 ">
@@ -24,6 +25,7 @@ const Navbar = () => {
         </div>
         <FilledButton title="Login" functionality={() => navigate("/Login")} />
       </div>
+    </div>
     </div>
   );
 };
