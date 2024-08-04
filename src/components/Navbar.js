@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="flex w-full justify-between items-center py-2 px-4 border-b">
       <div className="flex w-[50%] items-center ">
         <div className="flex items-center gap-2 ">
-          <img src={CatalyzeLogo} width={70} />
+          <img src={CatalyzeLogo} width={60} height={60}  />
           <div className="text-3xl">Catalyze</div>
         </div>
       </div>
