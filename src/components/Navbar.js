@@ -13,15 +13,15 @@ const Navbar = () => {
     <div className="flex w-full justify-between items-center py-2 px-4 border-b">
       <div className="flex w-[50%] items-center ">
         <div className="flex items-center gap-2 ">
-          <img src={CatalyzeLogo} width={70} />
+          <img src={CatalyzeLogo} width={50} />
           <div className="text-3xl">Catalyze</div>
         </div>
       </div>
       <div className="flex w-[30%]">
         <div className="flex w-full justify-evenly items-center">
-          <button className="text-xl hover:underline hover:underline-offset-4 hover:decoration-solid duration-300">Home</button>
-          <button className="text-xl hover:underline hover:underline-offset-4 hover:decoration-solid duration-300">About us</button>
-          <button className="text-xl hover:underline hover:underline-offset-4 hover:decoration-solid duration-300">Contact us</button>
+          <button className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">Home</button>
+          <button className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">About us</button>
+          <button className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">Contact us</button>
         </div>
         <FilledButton title="Login" functionality={() => navigate("/Login")} />
       </div>

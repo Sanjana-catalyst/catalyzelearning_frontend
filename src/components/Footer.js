@@ -7,8 +7,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col bg-gray-100">
-      <div className="flex flex-col md:flex-row justify-between border py-6 px-6 gap-4">
+    <div className="flex flex-col">
+      <div className="flex flex-col md:flex-row justify-between border-t py-6 px-6 gap-4">
         <div className="text-xl  font-semibold w-full md:w-1/4 text-center md:text-left">
           Feel free to get in touch with us, learn with us, and share with us
         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-gray-200">
+      <div className="flex flex-col md:flex-row justify-between items-center px-6 py-4">
         <div className="text-lg text-center md:text-left py-2">
           Copyright © 2023 Catalyze | All Rights Reserved
         </div>

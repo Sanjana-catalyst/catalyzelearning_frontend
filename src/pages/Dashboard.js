@@ -27,11 +27,18 @@ function Dashboard() {
 
   return (
     <div className="px-4 bg-gray-100">
-      <div className="text-3xl font-semibold pt-4 pb-16">Hai K.V.Komal Akhil</div>
+      <div className="text-3xl font-semibold pt-4 pb-16">
+        Hai K.V.Komal Akhil
+      </div>
       {/* <h1 className="text-2xl font-semibold">Progress</h1>
         <div className="border border-black-100 mb-4"></div> */}
-      <div className="flex justify-evenly gap-16">
-        <div className="flex justify-evenly p-4 items-center gap-2 mb-4 w-1/3 border rounded-lg shadow-xl hover:shadow-2xl" onClick={()=>{navigate("/LearningPath")}}>
+      <div className="flex justify-evenly gap-16 h-[20vh]">
+        <div
+          className="flex justify-evenly p-4 items-center gap-2 mb-4 w-1/3 border rounded-lg shadow-xl hover:shadow-2xl"
+          onClick={() => {
+            navigate("/LearningPath");
+          }}
+        >
           <div className="text-2xl font-semibold">Course Completed</div>
           {/* Vertical line */}
           <div className="h-[80%] border-l border-gray-400"></div>
@@ -46,39 +53,57 @@ function Dashboard() {
           <RadialProgressBar progress={50} size={150} strokeWidth={12} />
         </div>
       </div>
-      <div className="mb-4">
-        <h1 className="text-2xl font-semibold">Enrolled Courses</h1>
-        <div className="border border-black-100 mb-4"></div>
-        <div className="flex justify-center">
-          <div className="w-1/4">
-            <SingleCard
-              image="https://i.ibb.co/dL9fH7N/image-03-1.jpg"
-              CardTitle="The ultimate Front-End Development Program"
-              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
-              Button="View Details"
-            />
+      <div className="mb-2">
+        {/* <h1 className="text-2xl font-semibold">Enrolled Courses</h1>
+        <div className="border border-black-100 mb-4"></div> */}
+        <div className="flex items-center h-[40vh]">
+          <div className="text-4xl font-semibold w-1/3 text-center fade-in-left">
+            Enrolled Courses
+          </div>
+          <div className="h-full border border-gray-100 bg-black"></div>
+          <div className="flex justify-center items-center bg-white w-2/3 h-full rounded-md">
+            <div className="w-[30%] border rounded-md flex flex-col justify-between gap-2 py-4 shadow-xl hover:shadow-2xl">
+              <div className="text-xl px-2 py-2 font-semibold">
+                The Frontend Program
+              </div>
+              <div className="text-lg px-2">
+                This is a program where you will be able to learn the concepts
+                of Web Development using MERN stack.This helps you develop the
+                concept of idea to a product.
+              </div>
+              <div className="px-2 py-2">
+                <button className="p-3 text-md border bg-black text-white rounded-full">
+                  Visit Details
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <h1 className="text-2xl font-semibold">Other Courses</h1>
-        <div className="border border-black-100 mb-4"></div>
-        <div className="flex justify-evenly">
-          <div className="w-1/4">
-            <SingleCard
-              image="https://i.ibb.co/dL9fH7N/image-03-1.jpg"
-              CardTitle="The ultimate Back-End Development Program"
-              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
-              Button="View Details"
-            />
+      <div className="">
+        {/* <h1 className="text-2xl font-semibold">Other Courses</h1>
+        <div className="border border-black-100 mb-4"></div> */}
+        <div className="flex items-center h-[40vh]">
+          <div className="flex justify-center items-center bg-white w-2/3 h-full rounded-md">
+            <div className="w-[30%] border rounded-md flex flex-col justify-between gap-2 py-4 shadow-xl hover:shadow-2xl">
+              <div className="text-xl px-2 py-2 font-semibold">
+                The Frontend Program
+              </div>
+              <div className="text-lg px-2">
+                This is a program where you will be able to learn the concepts
+                of Web Development using MERN stack.This helps you develop the
+                concept of idea to a product.
+              </div>
+              <div className="px-2 py-2">
+                <button className="p-3 text-md border bg-black text-white rounded-full">
+                  Visit Details
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="w-1/4">
-            <SingleCard
-              image="https://i.ibb.co/dL9fH7N/image-03-1.jpg"
-              CardTitle="The ultimate Machine Learning Program"
-              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
-              Button="View Details"
-            />
+          <div className="h-full border border-gray-100 bg-black"></div>
+          <div className="text-4xl font-semibold w-1/3 text-center fade-in-right">
+            Other Courses
           </div>
         </div>
       </div>
