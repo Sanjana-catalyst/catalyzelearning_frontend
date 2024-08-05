@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const GoldCoin = () => {
     const navigate = useNavigate();
   return (
-    <div className="relative w-24 h-24 bg-yellow-500 rounded-full border-4 border-yellow-600 shadow-lg hover:scale-105" onClick={()=>{navigate("/Coins")}} >
+    <div className="relative w-24 h-24 bg-yellow-500 rounded-full border-4 border-yellow-600 shadow-lg hover:scale-105"  >
       <div className="absolute inset-0 flex items-center justify-center">
         <span className="text-black text-md font-bold">60 CC</span>
       </div>

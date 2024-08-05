@@ -9,28 +9,26 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Coins from './pages/Coins';
 import LearningPath from './pages/LearningPath';
-
+import Card from './pages/Card';
 
 function App() {
   return (
-   
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/Home" element={<Home />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Profile" element={<Profile />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/Settings" element={<Settings />} />
-           
-        <Route element={<Coins/>}path="/Coins"></Route>
-        <Route element={<LearningPath/>}path="/LearningPath"></Route>
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-  
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/card" element={<Card />} />
+          <Route path="/coins" element={<Coins />} />
+          <Route path="/learningpath" element={<LearningPath />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
