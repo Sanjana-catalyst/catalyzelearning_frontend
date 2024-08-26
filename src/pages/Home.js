@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function Home() {
- const [email, setEmail] = useState('');
- const [description, setDescription] = useState('');
+//  const [email, setEmail] = useState('');
+//  const [description, setDescription] = useState('');
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post('/api/home', { email, description });
+//   const handleLogin = async () => {
+//     try {
+//       const response = await axios.post('/api/home', { email, description });
       
-    } catch (error) {
+//     } catch (error) {
      
-    }
-  };
+//     }
+//   };
 
   return (
     <div>

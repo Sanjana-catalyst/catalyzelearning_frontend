@@ -4,6 +4,7 @@ import { TfiMenu } from 'react-icons/tfi';
 import CatalyzeLogo from "../assets/Catalyze logo.png";
 import FilledButton from "./FilledButton";
 
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -26,6 +27,16 @@ const Navbar = () => {
     navigate(path);
     setIsDropdownOpen(false); // Close the dropdown after navigation
   };
+ 
+    const isLoggedIn = !!localStorage.getItem('token');
+
+    const handleAboutClick = () => {
+      navigate(isLoggedIn ? "/about" : "/RedirectLogin");
+    };
+
+    const handleContactClick = () => {
+      navigate(isLoggedIn ? "/contact" : "/RedirectLogin");
+    };
 
   return (
     <div className="flex justify-center">
@@ -39,8 +50,8 @@ const Navbar = () => {
         <div className="hidden md:flex gap-5  md:mr-[1.5%] w-[30%]">
           <div className="flex w-full justify-evenly items-center">
             <button onClick={() => navigateTo("/")} className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">Home</button>
-            <button onClick={() => navigateTo("/about")} className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">About us</button>
-            <button onClick={() => navigateTo("/contact")} className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">Contact us</button>
+            <button  onClick={handleAboutClick}  className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">About us</button>
+            <button   onClick={handleContactClick}  className="text-lg hover:bg-black hover:rounded-full hover:text-white px-4 py-2 duration-300">Contact us</button>
             <FilledButton title="Login" functionality={() => navigateTo("/Login")} />
           </div>
          

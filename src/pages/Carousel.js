@@ -7,7 +7,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    
+
     const podcastImages = [Podcast, Podcast1, Podcast2, Podcast3];
 
     const goToPrevious = () => {
@@ -20,22 +20,22 @@ function Carousel() {
 
     return (
         <div className='flex justify-center'>
-            <div className='w-full max-w-screen-2xl p-2 pt-12 flex flex-col gap-14'>
-                <div className='relative flex flex-col lg:flex-row w-full justify-between items-center mb-[2.5rem] gap-8'>
+            <div className='w-full max-w-screen-2xl p-2 flex flex-col gap-8'>
+                <div className='relative flex flex-col lg:flex-row w-full justify-between items-center'>
                     {/* Left Arrow */}
                     <button
                         onClick={goToPrevious}
-                        className="absolute left-0 z-10 p-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 focus:outline-none"
+                        className="absolute left-2 sm:left-4 lg:left-0 z-10 p-1 sm:p-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 focus:outline-none"
                         aria-label="Previous"
                     >
-                        <FaChevronLeft />
+                        <FaChevronLeft size={20} />
                     </button>
 
                     <a
                         href="https://www.google.com"
-                        className="w-[50rem]"
+                        className="w-full lg:w-[50rem]"
                     >
-                        <div className="w-full relative h-80">
+                        <div className="w-full relative h-40 sm:h-48 md:h-60 lg:h-72 xl:h-80">
                             <div
                                 style={{ backgroundImage: `url(${podcastImages[currentIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                                 className="w-full h-full relative overflow-hidden rounded-lg"
@@ -43,7 +43,7 @@ function Carousel() {
                                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div
-                                        className="text-white font-semibold text-lg md:text-2xl lg:text-3xl absolute top-0 left-0 p-4"
+                                        className="text-white font-semibold text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl absolute top-0 left-0 p-2 sm:p-4"
                                         style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
                                     >
                                         {/* Optional: Add text or other content here */}
@@ -56,10 +56,10 @@ function Carousel() {
                     {/* Right Arrow */}
                     <button
                         onClick={goToNext}
-                        className="absolute right-0 z-10 p-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 focus:outline-none"
+                        className="absolute right-2 sm:right-4 lg:right-0 z-10 p-1 sm:p-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 focus:outline-none"
                         aria-label="Next"
                     >
-                        <FaChevronRight />
+                        <FaChevronRight size={20} />
                     </button>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -9,7 +9,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Coins from './pages/Coins';
 import LearningPath from './pages/LearningPath';
-import Card from './pages/Card';
+import PrivateRoute from './components/PrivateRoute';
+import RedirectLogin from './pages/RedirectLogin';
 
 function App() {
   return (
@@ -17,14 +18,18 @@ function App() {
       <Navbar />
       <main className="flex-grow">
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/card" element={<Card />} />
-          <Route path="/coins" element={<Coins />} />
-          <Route path="/learningpath" element={<LearningPath />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          
+          {/* Public route for RedirectLogin */}
+          <Route path="/RedirectLogin" element={<RedirectLogin />} />
+          
+          {/* Private routes */}
+          <Route path="/Profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/Dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/Settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
+          <Route path="/Coins" element={<PrivateRoute><Coins /></PrivateRoute>} />
+          <Route path="/LearningPath" element={<PrivateRoute><LearningPath /></PrivateRoute>} />
         </Routes>
       </main>
       <Footer />
